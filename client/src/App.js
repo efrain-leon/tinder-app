@@ -8,10 +8,7 @@ import AuthService from "./services/auth.service";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
-import Profile from "./components/Profile";
-import BoardUser from "./components/BoardUser";
-import BoardModerator from "./components/BoardModerator";
-import BoardAdmin from "./components/BoardAdmin";
+import Images from './components/Images';
 
 function App() {
   // const { user, setUser, isLoading } = useFindUser();
@@ -36,10 +33,7 @@ function App() {
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/profile" component={Profile} />
-          <Route path="/user" component={BoardUser} />
-          <Route path="/mod" component={BoardModerator} />
-          <Route path="/admin" component={BoardAdmin} />
+          <Route exact path="/images" component={Images} />
         </Switch>
       </div>
     </Router>

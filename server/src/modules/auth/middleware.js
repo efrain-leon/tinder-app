@@ -15,8 +15,6 @@ const authorize = async (req, res, next) => {
       return res.unauthorized();
     }
 
-    console.log('go innnn');
-
     currentUser = currentUser.toObject();
       
     req.payload.user = currentUser;

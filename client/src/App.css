@@ -123,7 +123,7 @@ h2 {
   justify-content: center;
   /* width: 90vw; */
   /* max-width: 260px; */
-  height: 400px;
+  height: 500px;
 }
 
 .card {
@@ -131,7 +131,7 @@ h2 {
   background-color: #fff;
   width: 80vw;
   max-width: 260px;
-  height: 300px;
+  height: 400px;
   box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
   border-radius: 20px;
   background-size: cover;
@@ -187,6 +187,20 @@ h2 {
 
 .buttons button:hover {
   transform: scale(1.05);
+}
+
+.navbar-expand {
+  padding-left: 20px !important;
+}
+
+.card-image {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.img-container {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @keyframes popup {

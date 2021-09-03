@@ -36,9 +36,10 @@ const getCurrentUser = () => {
   return JSON.parse(localStorage.getItem("TINDER_CURRENT_USER"));
 };
 
-export default {
+const AuthService = {
   register,
   login,
   logout,
-  getCurrentUser,
-};
+  getCurrentUser
+}
+export default AuthService;
