@@ -9,6 +9,9 @@ const Home = () => {
   return (
     <div className="container">
       <NavBar />
+      <header className="jumbotron">
+        <h3>HOME</h3>
+      </header>
       <div className='cardContainer card-image'>
         {images.map((image, index) =>
         <div>

@@ -32,14 +32,8 @@ const NavBar = () => {
         {currentUser ? (
           <div className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to={"/"} className="nav-link">
-                {currentUser.name}
-              </Link>
-            </li>
-            
-            <li className="nav-item">
               <Link to={"/images"} className="nav-link">
-                Images
+                Tinder
               </Link>
             </li>
 
