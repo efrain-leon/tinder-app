@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import TinderCard from 'react-tinder-card';
 
 import NavBar from './NabBar';
@@ -11,17 +11,7 @@ const alreadyRemoved = []
 let charactersState = images;
 
 const Images = () => {
-
-  const onSwipe = (direction) => {
-    console.log('You swiped: ' + direction)
-  }
-  
-  const onCardLeftScreen = (myIdentifier) => {
-    console.log(myIdentifier + ' left the screen')
-  }
-
-  const [characters, setCharacters] = useState(images)
-  const [lastDirection, setLastDirection] = useState()
+  const [characters, setCharacters] = useState(images);
 
   const childRefs = useMemo(() => Array(images.length).fill(0).map(i => React.createRef()), [])
 
@@ -30,7 +20,6 @@ const Images = () => {
     let formData = {identifier: nameToDelete, direction: direction};
     await api.post(`${AppConstants().apiHost}/tinderAction`, formData);
 
-    setLastDirection(direction)
     alreadyRemoved.push(nameToDelete)
   }
 
@@ -53,7 +42,7 @@ const Images = () => {
     <div className="container">
       <NavBar />
       <header className="jumbotron">
-        <h3>HOME</h3>
+        <h3>TINDER</h3>
       </header>
       <div className='cardContainer'>
         {characters.map((character, index) =>
@@ -70,8 +59,8 @@ const Images = () => {
         )}
       </div>
       <div className='buttons'>
-        <button onClick={() => swipe('left')}>Swipe left!</button>
-        <button onClick={() => swipe('right')}>Swipe right!</button>
+        <button onClick={() => swipe('left')}>Dislike!</button>
+        <button onClick={() => swipe('right')}>Like!</button>
       </div>
     </div>
   );

@@ -1,10 +1,7 @@
-import React, { useState, useMemo, useEffect } from "react";
-import TinderCard from 'react-tinder-card';
-import axios from "axios";
+// import React, { useState, useMemo, useEffect } from "react";
 
 import NavBar from './NabBar';
-import AppConstants from "../constants/app.constants";
-import api from '../services/api';
+// import api from '../services/api';
 
 const images = [62, 83, 466, 965, 982, 1043, 738].map((n) => {return {id: n, name: n, url: `https://picsum.photos/id/${n}/900/500`}});
 
