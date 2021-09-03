@@ -1,0 +1,7 @@
+{
+  "execMap": {
+    "js": "babel-node"
+  },
+  "watch": ["src/*", "public/*", "views/*"],
+  "ext": "js, html, css, json, hbs"
+}
